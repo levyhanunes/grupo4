@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     //MARK: - OUTLETS: não requer ação do usuário
     @IBOutlet weak var dadoImageView01: UIImageView!
     @IBOutlet weak var dadoImageView02: UIImageView!
-    var selectDado1 = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         //who.what = value
@@ -24,13 +23,12 @@ class ViewController: UIViewController {
         //Exercícios: Fazer com que quando precione o botao rolar dados os dois dados estejam no numero 4.
         //>dadoImageView01.image = #imageLiteral(resourceName: "DiceFour")
         //>dadoImageView02.image = #imageLiteral(resourceName: "DiceFour")
-        //cada vez q clica no botão aumenta um
-        dadoImageView01.image = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")][selectDado1]
-        dadoImageView02.image = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")][selectDado1]
-        selectDado1 += 1
-        if (selectDado1 > 5){
-            selectDado1 = 0
-        }
+        
+        let arrayDados = [UIImage(named: "DiceOne"),UIImage(named: "DiceTwo"),UIImage(named: "DiceThree"), UIImage(named: "DiceFour"), UIImage(named: "DiceFive"), UIImage(named: "DiceSix")]
+        
+        dadoImageView01.image = arrayDados[Int.random(in: 0...5)]
+        dadoImageView02.image = arrayDados[Int.random(in: 0...5)]
+        
     }
 }
 
