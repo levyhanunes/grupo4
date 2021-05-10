@@ -17,13 +17,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dadoImageView1.image = #imageLiteral(resourceName: "DiceFour")
-        
         // Dot notation: who.what = value
         //dadoImageView1.alpha = 0.5
         // Do any additional setup after loading the view.
     }
 
-
+    //MARK: - Actions
+    @IBAction func rolarDadosPressed(_ sender: UIButton) {
+        let arrayDados = [UIImage(named: "DiceOne"), UIImage(named: "DiceTwo"), UIImage(named: "DiceThree"), UIImage(named: "DiceFour"), UIImage(named: "DiceFive"), UIImage(named: "DiceSix")]
+        
+        //Dado 1
+        dadoImageView1.image = arrayDados[Int.random(in: 0...5)]
+        
+        //Dado 2
+        dadoImageView2.image = arrayDados[Int.random(in: 0...5)]
+        
+        //(dadoImageView1.image, dadoImageView2.image) = (dice.randomElement(), dice.randomElement())
+    }
+    
 }
 
