@@ -16,36 +16,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="sIu-Q8-MsP">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92Z-qq-OCB" userLabel="ViewFundo">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-do-2l3">
-                                <rect key="frame" x="87" y="94" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="uln-Zf-gL7">
-                                <rect key="frame" x="42" y="388" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="LPu-O5-2yf">
-                                <rect key="frame" x="242" y="388" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kw-V1-GKj">
-                                <rect key="frame" x="159" y="678" width="95" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.60594880579999999" green="0.11350636930000001" blue="0.1245979592" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Rolar Dados">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="rolarDadosPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rf2-Fk-eJU"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="sIu-Q8-MsP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hmH-cv-4PY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNd-A6-rIK" userLabel="ViewLogo">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="292"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-do-2l3">
+                                                        <rect key="frame" x="109" y="82" width="196" height="128"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="196" id="baY-VJ-zNw"/>
+                                                            <constraint firstAttribute="height" constant="128" id="gyR-gq-RSy"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="qSf-do-2l3" firstAttribute="centerX" secondItem="MNd-A6-rIK" secondAttribute="centerX" id="YVN-GJ-Krm"/>
+                                                    <constraint firstItem="qSf-do-2l3" firstAttribute="centerY" secondItem="MNd-A6-rIK" secondAttribute="centerY" id="iDc-Vp-CsA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63E-S8-pPq" userLabel="ViewDados">
+                                                <rect key="frame" x="0.0" y="302" width="414" height="292"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="1u2-9V-RwP" userLabel="Stack View Dados">
+                                                        <rect key="frame" x="49" y="86" width="316" height="120"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="uln-Zf-gL7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="avT-jt-bt9"/>
+                                                                    <constraint firstAttribute="height" constant="120" id="fQP-Df-Vge"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="LPu-O5-2yf">
+                                                                <rect key="frame" x="196" y="0.0" width="120" height="120"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="4W3-do-aLh"/>
+                                                                    <constraint firstAttribute="height" constant="120" id="Fvi-qP-WSj"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="1u2-9V-RwP" firstAttribute="centerX" secondItem="63E-S8-pPq" secondAttribute="centerX" id="FQ3-eG-iRy"/>
+                                                    <constraint firstItem="1u2-9V-RwP" firstAttribute="centerY" secondItem="63E-S8-pPq" secondAttribute="centerY" id="aNU-zU-Duq"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vay-KM-Fff" userLabel="ViewBotao">
+                                                <rect key="frame" x="0.0" y="604" width="414" height="292"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kw-V1-GKj">
+                                                        <rect key="frame" x="159.5" y="122" width="95" height="48"/>
+                                                        <color key="backgroundColor" red="0.60594880579999999" green="0.11350636930000001" blue="0.1245979592" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="rv6-rd-cAT"/>
+                                                            <constraint firstAttribute="width" constant="95" id="zEz-Zr-axW"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Rolar Dados">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="rolarDadosPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rf2-Fk-eJU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="0kw-V1-GKj" firstAttribute="centerX" secondItem="vay-KM-Fff" secondAttribute="centerX" id="eJ1-ho-EGv"/>
+                                                    <constraint firstItem="0kw-V1-GKj" firstAttribute="centerY" secondItem="vay-KM-Fff" secondAttribute="centerY" id="u4P-Qa-ZxR"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="MNd-A6-rIK" secondAttribute="trailing" id="4Q0-ix-4iB"/>
+                                            <constraint firstItem="63E-S8-pPq" firstAttribute="leading" secondItem="hmH-cv-4PY" secondAttribute="leading" id="Ij7-Ne-fmh"/>
+                                            <constraint firstAttribute="trailing" secondItem="vay-KM-Fff" secondAttribute="trailing" id="QLS-r3-WjB"/>
+                                            <constraint firstItem="MNd-A6-rIK" firstAttribute="leading" secondItem="hmH-cv-4PY" secondAttribute="leading" id="mw4-4f-E1P"/>
+                                            <constraint firstItem="vay-KM-Fff" firstAttribute="leading" secondItem="hmH-cv-4PY" secondAttribute="leading" id="puh-cl-iAN"/>
+                                            <constraint firstAttribute="trailing" secondItem="63E-S8-pPq" secondAttribute="trailing" id="u5o-sT-IPR"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hmH-cv-4PY" secondAttribute="trailing" id="1YY-ov-rkQ"/>
+                                    <constraint firstItem="sIu-Q8-MsP" firstAttribute="top" secondItem="92Z-qq-OCB" secondAttribute="top" id="FMS-EG-7YE"/>
+                                    <constraint firstAttribute="bottom" secondItem="hmH-cv-4PY" secondAttribute="bottom" id="Ubc-Cw-Z8E"/>
+                                    <constraint firstAttribute="trailing" secondItem="sIu-Q8-MsP" secondAttribute="trailing" id="bcV-gS-lKw"/>
+                                    <constraint firstItem="hmH-cv-4PY" firstAttribute="top" secondItem="92Z-qq-OCB" secondAttribute="top" id="hpL-wm-4vy"/>
+                                    <constraint firstAttribute="bottom" secondItem="sIu-Q8-MsP" secondAttribute="bottom" id="je7-8f-qLs"/>
+                                    <constraint firstItem="sIu-Q8-MsP" firstAttribute="leading" secondItem="92Z-qq-OCB" secondAttribute="leading" id="mYL-Dg-q9P"/>
+                                    <constraint firstItem="hmH-cv-4PY" firstAttribute="leading" secondItem="92Z-qq-OCB" secondAttribute="leading" id="uKD-Hs-Ecb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="92Z-qq-OCB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="89g-Tk-U2r"/>
+                            <constraint firstAttribute="trailing" secondItem="92Z-qq-OCB" secondAttribute="trailing" id="8zd-KJ-Mua"/>
+                            <constraint firstItem="92Z-qq-OCB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="G5M-f0-F3D"/>
+                            <constraint firstAttribute="bottom" secondItem="92Z-qq-OCB" secondAttribute="bottom" id="Mrm-Sg-BVR"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dadoImageView1" destination="uln-Zf-gL7" id="8Rt-cU-S65"/>
@@ -54,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-581" y="-50"/>
+            <point key="canvasLocation" x="-1033.3333333333335" y="-26.116071428571427"/>
         </scene>
     </scenes>
     <resources>
